@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* ─── Design tokens ─────────────────────────────────────────── */
+@theme {
+  --font-display: "Syne", "Noto Sans Georgian", sans-serif;
+  --font-body: "Inter", "Noto Sans Georgian", sans-serif;
+  --color-orange: #e85d04;
+  --color-orange-light: #ff7a20;
+  --color-orange-dark: #c44b00;
+}
+
+/* ─── Theme variables (dark default) ───────────────────────── */
+:root {
+  --fg: #ffffff;
+  --bg: #080808;
+  --surface: #0d0d0d;
+  --surface-2: #111111;
+  --border-subtle: rgba(255, 255, 255, 0.07);
+}
+
+:root.light {
+  --fg: #0a0808;
+  --bg: #f5f2ee;
+  --surface: #ede9e3;
+  --surface-2: #e5e0d8;
+  --border-subtle: rgba(10, 8, 8, 0.08);
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", "Noto Sans Georgian", sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #e85d04; border-radius: 2px; }
+
+::selection { background: rgba(232, 93, 4, 0.3); color: #fff; }
+
+input::placeholder,
+textarea::placeholder {
+  color: color-mix(in srgb, var(--fg) 22%, transparent);
+}
+
+select option {
+  background: var(--surface-2);
+  color: var(--fg);
+}
+
+/* ─── Typography ────────────────────────────────────────────── */
+.font-display { font-family: "Syne", "Noto Sans Georgian", sans-serif; }
+
+.text-gradient {
+  background: linear-gradient(135deg, #e85d04 0%, #ff9a3c 50%, #e85d04 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* ─── Semantic text color utilities ────────────────────────── */
+@utility text-fg    { color: var(--fg); }
+@utility text-fg-85 { color: color-mix(in srgb, var(--fg) 85%, transparent); }
+@utility text-fg-80 { color: color-mix(in srgb, var(--fg) 80%, transparent); }
+@utility text-fg-70 { color: color-mix(in srgb, var(--fg) 70%, transparent); }
+@utility text-fg-65 { color: color-mix(in srgb, var(--fg) 65%, transparent); }
+@utility text-fg-60 { color: color-mix(in srgb, var(--fg) 60%, transparent); }
+@utility text-fg-55 { color: color-mix(in srgb, var(--fg) 55%, transparent); }
+@utility text-fg-50 { color: color-mix(in srgb, var(--fg) 50%, transparent); }
+@utility text-fg-45 { color: color-mix(in srgb, var(--fg) 45%, transparent); }
+@utility text-fg-40 { color: color-mix(in srgb, var(--fg) 40%, transparent); }
+@utility text-fg-35 { color: color-mix(in srgb, var(--fg) 35%, transparent); }
+@utility text-fg-30 { color: color-mix(in srgb, var(--fg) 30%, transparent); }
+@utility text-fg-25 { color: color-mix(in srgb, var(--fg) 25%, transparent); }
+@utility text-fg-20 { color: color-mix(in srgb, var(--fg) 20%, transparent); }
+
+/* ─── Semantic bg / border utilities ───────────────────────── */
+@utility bg-bg      { background-color: var(--bg); }
+@utility bg-surface { background-color: var(--surface); }
+@utility bg-surface-2 { background-color: var(--surface-2); }
+
+@utility bg-fg-3    { background-color: color-mix(in srgb, var(--fg)  3%, transparent); }
+@utility bg-fg-5    { background-color: color-mix(in srgb, var(--fg)  5%, transparent); }
+@utility bg-fg-6    { background-color: color-mix(in srgb, var(--fg)  6%, transparent); }
+@utility bg-fg-10   { background-color: color-mix(in srgb, var(--fg) 10%, transparent); }
+
+@utility border-fg-5  { border-color: color-mix(in srgb, var(--fg)  5%, transparent); }
+@utility border-fg-7  { border-color: color-mix(in srgb, var(--fg)  7%, transparent); }
+@utility border-fg-10 { border-color: color-mix(in srgb, var(--fg) 10%, transparent); }
+@utility border-fg-20 { border-color: color-mix(in srgb, var(--fg) 20%, transparent); }
+
+/* ─── Glass morphism ────────────────────────────────────────── */
+.glass {
+  background: color-mix(in srgb, var(--fg) 3%, transparent);
+  border: 1px solid color-mix(in srgb, var(--fg) 7%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.glass-strong {
+  background: color-mix(in srgb, var(--fg) 5%, transparent);
+  border: 1px solid color-mix(in srgb, var(--fg) 10%, transparent);
+  backdrop-filter: blur(20px);
+}
+
+/* ─── Glow utilities ────────────────────────────────────────── */
+.glow-orange    { box-shadow: 0 0 30px rgba(232,93,4,0.35), 0 0 60px rgba(232,93,4,0.12); }
+.glow-orange-sm { box-shadow: 0 0 15px rgba(232,93,4,0.25); }
+
+/* ─── Layout patterns ───────────────────────────────────────── */
+.grid-pattern {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--fg) 2.5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--fg) 2.5%, transparent) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.section-padding {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+/* ─── Animations ─────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 28s linear infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+.float-anim { animation: float 6s ease-in-out infinite; }
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.spin-slow { animation: spin-slow 20s linear infinite; }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(232,93,4,0.3); }
+  50%       { box-shadow: 0 0 45px rgba(232,93,4,0.6), 0 0 80px rgba(232,93,4,0.2); }
+}
+.pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

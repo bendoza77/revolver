@@ -1,0 +1,528 @@
+{
+  "nav": {
+    "services": "Services",
+    "why_us": "Why Us",
+    "pricing": "Pricing",
+    "work": "Work",
+    "contact": "Contact",
+    "cta": "Get Started"
+  },
+  "hero": {
+    "badge": "Premium Digital Agency",
+    "line1": "We Build",
+    "line2": "Brands That",
+    "line3": "Dominate.",
+    "sub": "Strategy. Content. Paid Media. We engineer growth systems that turn attention into revenue — at scale.",
+    "cta_primary": "Start Growing",
+    "cta_secondary": "Explore Services",
+    "scroll": "Scroll",
+    "stats": {
+      "brands": "Brands Elevated",
+      "roi": "Average ROI",
+      "reach": "Reach Generated"
+    },
+    "float": {
+      "reach": "Reach",
+      "conversions": "Conversions",
+      "roi": "ROI"
+    }
+  },
+  "marquee": {
+    "items": [
+      "Social Media Marketing",
+      "Content Creation",
+      "Paid Advertising",
+      "Video Production",
+      "Brand Strategy",
+      "Google Ads",
+      "Audio Branding",
+      "Lead Generation",
+      "TikTok Growth",
+      "Graphic Design"
+    ]
+  },
+  "services": {
+    "label": "What We Do",
+    "title": "Everything Your Brand",
+    "title_accent": "Needs to Win.",
+    "explore": "Explore",
+    "social": {
+      "title": "Social Media Marketing",
+      "tagline": "Build presence. Drive engagement. Scale your audience.",
+      "items": [
+        "Full strategy & execution planning",
+        "Content creation (FB, IG, TikTok, LinkedIn)",
+        "Daily post management & scheduling",
+        "Paid ad campaign management"
+      ]
+    },
+    "content": {
+      "title": "Content Marketing",
+      "tagline": "Words that sell. Visuals that stop the scroll.",
+      "items": [
+        "Ad copywriting & brand storytelling",
+        "Graphic design (banners, posters, branding)",
+        "Photography & art direction",
+        "Video production & motion design"
+      ]
+    },
+    "ads": {
+      "title": "Digital Advertising",
+      "tagline": "Precision targeting. Maximum return on every euro.",
+      "items": [
+        "Social Ads — Awareness, Engagement & Conversions",
+        "Google Search & Display campaigns",
+        "YouTube pre-roll & remarketing",
+        "Lead generation & e-commerce funnels"
+      ]
+    },
+    "audio": {
+      "title": "Audio Services",
+      "tagline": "Sound that elevates your brand identity.",
+      "items": [
+        "Professional voiceover recording",
+        "Original music production",
+        "Audio mixing & mastering",
+        "Sonic branding & jingles"
+      ]
+    }
+  },
+  "benefits": {
+    "label": "Why Choose Us",
+    "title": "Results You Can",
+    "title_accent": "Actually Measure.",
+    "awareness": {
+      "title": "Brand Awareness",
+      "description": "We put your brand in front of the right audience — consistently, creatively, and at scale. Build recognition that compounds over time.",
+      "stat_label": "Avg. reach increase"
+    },
+    "revenue": {
+      "title": "More Leads & Sales",
+      "description": "Data-driven campaigns engineered to convert. Every touchpoint is optimized to move prospects down the funnel — faster.",
+      "stat_label": "Avg. return on ad spend"
+    },
+    "image": {
+      "title": "Premium Brand Image",
+      "description": "First impressions are permanent. We craft visuals and messaging so polished, your audience perceives you as the industry leader.",
+      "stat_label": "Client satisfaction"
+    },
+    "communication": {
+      "title": "Effective Communication",
+      "description": "Messaging that resonates, converts, and builds lasting loyalty. We find your brand voice and amplify it across every channel.",
+      "stat_label": "Impressions delivered"
+    },
+    "process": {
+      "01": { "title": "Discovery", "desc": "We deep-dive into your brand, market, and goals." },
+      "02": { "title": "Strategy", "desc": "A tailored growth roadmap built around your objectives." },
+      "03": { "title": "Execute", "desc": "Premium content and campaigns deployed with precision." },
+      "04": { "title": "Optimize", "desc": "Real-time data drives continuous improvement and scaling." }
+    }
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "Transparent Pricing.",
+    "title_accent": "Real Results.",
+    "subtitle": "No lock-in contracts. Cancel anytime. Every plan includes onboarding and dedicated support.",
+    "popular": "Most Popular",
+    "period": "/month",
+    "starter": {
+      "name": "Starter Package",
+      "tagline": "5 Posts | 2 Reels",
+      "cta": "Get Started",
+      "features": [
+        "Full content strategy",
+        "Neuromarketing-based content creation",
+        "Graphic design",
+        "Sales-driven copywriting",
+        "Business Manager setup & management",
+        "Facebook | Instagram | LinkedIn | TikTok"
+      ]
+    },
+    "business": {
+      "name": "Business Package",
+      "tagline": "6 Posts | 4 Reels",
+      "cta": "Start Growing",
+      "features": [
+        "Full content strategy",
+        "Multi-format content creation",
+        "Graphic design",
+        "Sales-oriented copywriting",
+        "Business Manager setup & management",
+        "Facebook | Instagram | LinkedIn | TikTok",
+        "Professional voiceover",
+        "Precise audience targeting & A/B testing"
+      ]
+    },
+    "premium": {
+      "name": "Premium Package",
+      "tagline": "8 Posts | 4 Reels",
+      "cta": "Go Premium",
+      "features": [
+        "Strategic sales consulting",
+        "Brand neuro-identity development & positioning",
+        "Full content strategy",
+        "Multi-format content creation",
+        "Graphic design",
+        "Sales-driven copywriting",
+        "Platform-oriented content adaptation",
+        "Business Manager setup & management",
+        "Facebook | Instagram | LinkedIn | TikTok",
+        "Professional voiceover",
+        "Custom brand music production"
+      ]
+    },
+    "addons": {
+      "title": "Additional Services",
+      "note": "Prices are determined on a monthly basis.",
+      "group_video": "Video & Ads Services",
+      "reel_name": "Full Production of 1 Reel",
+      "reel_desc": "Scripting, Filming, Editing",
+      "google_name": "Google Ads",
+      "google_desc": "Setup and Monthly Management",
+      "group_audio": "Audio Services",
+      "audio_name": "Audio Services",
+      "audio_desc": "Professional Voiceover + Original Brand Music"
+    },
+    "tiktok": {
+      "title": "TikTok Packages",
+      "starter_name": "TikTok Starter",
+      "starter_videos": "5 Videos per Month",
+      "growth_name": "TikTok Growth",
+      "growth_videos": "10 Videos per Month"
+    }
+  },
+  "portfolio": {
+    "label": "Our Work",
+    "title": "Proven Results.",
+    "title_accent": "Real Brands.",
+    "result": "Result",
+    "filters": ["All", "Social Media", "Video", "Branding", "Ads"],
+    "project_1": { "title": "FitLife Brand Launch", "result": "+520% brand reach" },
+    "project_2": { "title": "EcoWear TikTok Campaign", "result": "2.1M views in 30 days" },
+    "project_3": { "title": "TechPulse Google Ads", "result": "4.9× ROAS achieved" },
+    "project_4": { "title": "NovaCafe Instagram Growth", "result": "0 → 48K followers in 6mo" },
+    "project_5": { "title": "LuxeSkin Product Launch", "result": "€180K revenue in week 1" },
+    "project_6": { "title": "AutoVision Lead Gen", "result": "320 qualified leads/month" }
+  },
+  "cta": {
+    "label": "Let's Talk",
+    "title": "Ready to",
+    "title_accent": "Grow Your Brand?",
+    "subtitle": "Drop us a message and we'll get back to you within 24 hours with a custom growth strategy.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "name_placeholder": "John Smith",
+      "email_placeholder": "john@company.com",
+      "service": "Service Interested In",
+      "service_placeholder": "Select a service...",
+      "message": "Tell Us About Your Brand",
+      "message_placeholder": "Brief overview of your brand, goals, and challenges...",
+      "disclaimer": "We respond within 24 hours. No spam, ever.",
+      "submit": "Send Message",
+      "success_title": "Message Sent!",
+      "success_text": "We'll be in touch within 24 hours."
+    },
+    "services": [
+      "Social Media Marketing",
+      "Content Marketing",
+      "Digital Advertising",
+      "Audio Services",
+      "Full-Service Package"
+    ]
+  },
+  "footer": {
+    "tagline": "A premium digital marketing agency engineering growth for ambitious brands through strategy, content, and paid media.",
+    "services": {
+      "title": "Services",
+      "items": ["Social Media", "Content Marketing", "Digital Ads", "Audio Services"]
+    },
+    "company": {
+      "title": "Company",
+      "items": ["About Us", "Our Work", "Pricing", "Blog"]
+    },
+    "contact": {
+      "title": "Contact",
+      "items": ["amirandolidze5@gmail.com", "(995+) 555 451 003", "Available Mon–Fri", "Response < 24h"]
+    },
+    "copyright": "© {{year}} REVOLVER Agency. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "about": {
+    "hero_label": "About REVOLVER",
+    "hero_title": "We Engineer Brands",
+    "hero_title_accent": "That Dominate.",
+    "hero_subtitle": "Founded on the belief that great marketing is a multiplier — not a cost center. We're the team ambitious brands call when they're ready to grow.",
+    "stats": [
+      { "value": "60+", "label": "Brands elevated" },
+      { "value": "3.8×", "label": "Average ROI delivered" },
+      { "value": "94%", "label": "Client retention rate" },
+      { "value": "5yrs", "label": "In the industry" }
+    ],
+    "mission_label": "Our Mission",
+    "mission_title": "Turning Attention Into",
+    "mission_title_accent": "Revenue.",
+    "mission_p1": "REVOLVER was founded with a singular mission: to close the gap between a brand's potential and its actual results. Too many great businesses get lost in the noise — not because their product isn't good, but because their marketing isn't working hard enough.",
+    "mission_p2": "We combine strategic thinking, neuromarketing principles, and premium creative execution to build marketing systems that compound over time. Not campaigns — engines.",
+    "mission_points": [
+      "Strategy-first, execution-second",
+      "Every decision backed by data",
+      "Premium quality, zero compromise",
+      "Transparent reporting always",
+      "Long-term growth over short-term spikes"
+    ],
+    "values_label": "Our Values",
+    "values_title": "What We",
+    "values_title_accent": "Stand For.",
+    "values": [
+      { "title": "Results First", "desc": "Every decision is driven by data and tied to measurable outcomes. Vanity metrics don't exist in our vocabulary." },
+      { "title": "Trust & Transparency", "desc": "We tell you what's working and what isn't — no spin, no fluff. Honest reporting every single month." },
+      { "title": "Creative Excellence", "desc": "Great marketing is great storytelling. We obsess over every word, pixel, and frame to deliver premium quality." },
+      { "title": "True Partnership", "desc": "We work as an extension of your team — invested in your success as if it were our own business." }
+    ],
+    "team_label": "The Team",
+    "team_title": "Meet the",
+    "team_title_accent": "People Behind",
+    "team_title_end": "the Results.",
+    "team": [
+      { "name": "Alex Reeves", "role": "Founder & Creative Director", "desc": "10+ years in digital marketing. Obsessed with brand psychology and conversion-driven creative." },
+      { "name": "Sofia Marsh", "role": "Head of Paid Media", "desc": "Ex-Meta advertiser managing $2M+ in ad spend monthly. Precision targeting is her superpower." },
+      { "name": "Luca Fontaine", "role": "Lead Content Strategist", "desc": "Former brand journalist turned content marketer. Crafts narratives that resonate and convert." },
+      { "name": "Nina Kovacs", "role": "Video Production Lead", "desc": "Award-winning videographer and editor. Creates content that stops the scroll, every time." }
+    ],
+    "cta_title": "Ready to Work",
+    "cta_title_accent": "Together?",
+    "cta_subtitle": "We take on a limited number of new clients each quarter. Let's see if we're the right fit.",
+    "cta_button": "Start the Conversation"
+  },
+  "our_work": {
+    "hero_label": "Our Work",
+    "hero_title": "Proven Results.",
+    "hero_title_accent": "Real Brands.",
+    "hero_subtitle": "A selection of campaigns, launches, and growth stories from the brands we've had the privilege of building.",
+    "stats": [
+      { "v": "60+", "l": "Brands served" },
+      { "v": "3.8×", "l": "Avg. ROI" },
+      { "v": "12M+", "l": "Total reach generated" },
+      { "v": "94%", "l": "Client retention" }
+    ],
+    "filters": ["All", "Social Media", "Video", "Branding", "Ads"],
+    "duration": "Duration",
+    "budget": "Budget",
+    "details": {
+      "1": { "duration": "3 months", "budget": "₾2,500/mo", "challenge": "FitLife had zero brand presence online. We built their social identity from scratch and engineered a content strategy that resonated with fitness enthusiasts aged 18–35." },
+      "2": { "duration": "1 month", "budget": "₾3,200/mo", "challenge": "EcoWear needed rapid awareness for their sustainable fashion launch. TikTok-native content strategy with influencer seeding drove 2.1M organic views." },
+      "3": { "duration": "Ongoing", "budget": "₾1,800/mo", "challenge": "TechPulse's previous agency was burning budget with generic targeting. We rebuilt their Google Ads architecture from scratch, achieving 4.9× ROAS in month 2." },
+      "4": { "duration": "6 months", "budget": "₾2,000/mo", "challenge": "NovaCafe had 200 followers and inconsistent content. Full Instagram strategy with daily management grew them to 48K in 6 months." },
+      "5": { "duration": "4 weeks", "budget": "₾4,500", "challenge": "LuxeSkin's product launch needed maximum impact in minimum time. Brand identity, ad creative, and influencer campaign generated €180K in week 1." },
+      "6": { "duration": "Ongoing", "budget": "₾2,200/mo", "challenge": "AutoVision needed qualified leads, not just clicks. Targeted lead generation funnels across Facebook and Google now deliver 320+ qualified leads per month." }
+    },
+    "cta_title": "Your Brand Could Be",
+    "cta_title_accent": "Next.",
+    "cta_subtitle": "Let's build a case study around your brand's growth story.",
+    "cta_button": "Start Your Project"
+  },
+  "pricing_page": {
+    "hero_label": "Pricing",
+    "hero_title": "Transparent Pricing.",
+    "hero_title_accent": "Real Results.",
+    "hero_subtitle": "No lock-in contracts. Cancel anytime. Every plan includes onboarding and dedicated support.",
+    "plans_label": "Monthly Plans",
+    "plans_title": "Choose Your",
+    "plans_title_accent": "Growth Level.",
+    "faq_label": "FAQ",
+    "faq_title": "Common",
+    "faq_title_accent": "Questions.",
+    "faq": [
+      { "q": "Is there a minimum contract length?", "a": "No lock-in contracts. All plans are month-to-month and can be cancelled at any time with 30 days' notice." },
+      { "q": "What's included in onboarding?", "a": "Every plan starts with a strategy session, brand audit, and competitor analysis. We make sure we understand your business deeply before producing a single piece of content." },
+      { "q": "Can I upgrade or downgrade my plan?", "a": "Absolutely. You can switch plans at any time. Changes take effect at the start of the next billing cycle." },
+      { "q": "Do you work with international clients?", "a": "Yes. We work with brands across Europe, the US, and the Middle East. All deliverables are available in English and Georgian." },
+      { "q": "How quickly will I see results?", "a": "Most clients see meaningful engagement improvements within 30 days. Significant revenue impact typically becomes measurable within 60–90 days." },
+      { "q": "What if I need something custom?", "a": "Contact us and we'll build a custom package. We work with brands of all sizes and budgets." }
+    ],
+    "cta_title": "Not Sure Which Plan?",
+    "cta_title_accent": "Let's Talk.",
+    "cta_subtitle": "Tell us about your brand and goals — we'll recommend the right package for your budget and objectives.",
+    "cta_button": "Get a Custom Quote"
+  },
+  "social_media_page": {
+    "hero_label": "Social Media Marketing",
+    "hero_title": "Build Presence.",
+    "hero_title_accent": "Dominate Your Feed.",
+    "hero_subtitle": "We engineer social media strategies that grow audiences, drive engagement, and turn followers into loyal customers — at scale.",
+    "hero_cta": "Start Growing",
+    "hero_link": "View Pricing",
+    "stats": [
+      { "value": "+340%", "label": "Avg. follower growth" },
+      { "value": "8.2×", "label": "Engagement rate boost" },
+      { "value": "94%", "label": "Client retention rate" }
+    ],
+    "features_label": "What's Included",
+    "features_title": "Everything You Need to",
+    "features_title_accent": "Win Social.",
+    "features": [
+      { "title": "Audience Growth", "desc": "Targeted strategies that attract followers who actually convert into paying customers." },
+      { "title": "Data-Driven Strategy", "desc": "Every post, story, and campaign is backed by analytics — no guessing, just results." },
+      { "title": "Multi-Platform Management", "desc": "Facebook, Instagram, TikTok, LinkedIn — one coherent brand voice everywhere." },
+      { "title": "Global Reach", "desc": "Scale your brand's visibility beyond borders with geo-targeted campaigns." },
+      { "title": "Community Management", "desc": "Real-time engagement — comments, DMs, mentions — handled with your brand voice." },
+      { "title": "Monthly Reporting", "desc": "Clear, transparent reports showing exactly what's working and what's growing." }
+    ],
+    "process_label": "How It Works",
+    "process_title": "Our",
+    "process_title_accent": "Proven Process",
+    "process": [
+      { "num": "01", "title": "Brand Audit", "desc": "We analyze your current presence, competitors, and audience demographics." },
+      { "num": "02", "title": "Strategy Blueprint", "desc": "A custom content calendar and platform roadmap built for your goals." },
+      { "num": "03", "title": "Content Production", "desc": "Scroll-stopping visuals, copy, and reels crafted by our creative team." },
+      { "num": "04", "title": "Launch & Optimize", "desc": "We publish, monitor, A/B test, and refine continuously for maximum ROI." }
+    ],
+    "cta_title": "Ready to",
+    "cta_title_accent": "Grow Your Social?",
+    "cta_subtitle": "Let's build a social media presence that generates real revenue for your business.",
+    "cta_button": "Book a Free Strategy Call"
+  },
+  "content_page": {
+    "hero_label": "Content Marketing",
+    "hero_title": "Words That Sell.",
+    "hero_title_accent": "Visuals That Stop the Scroll.",
+    "hero_subtitle": "We create premium content that captures attention, communicates your value, and converts browsers into buyers.",
+    "hero_cta": "Start Creating",
+    "hero_link": "View Pricing",
+    "stats": [
+      { "value": "3×", "label": "Avg. engagement lift" },
+      { "value": "2.8×", "label": "Content conversion rate" },
+      { "value": "500+", "label": "Assets produced / year" }
+    ],
+    "features_label": "What We Create",
+    "features_title": "Content That",
+    "features_title_accent": "Actually Converts.",
+    "features": [
+      { "title": "Ad Copywriting", "desc": "Persuasive copy that hooks, engages, and converts across every platform and format." },
+      { "title": "Graphic Design", "desc": "Brand-consistent visuals — banners, posters, carousels — that stop the scroll." },
+      { "title": "Video Production", "desc": "From concept to delivery — reels, ads, testimonials, and brand films that convert." },
+      { "title": "Brand Storytelling", "desc": "A narrative that makes your brand memorable, relatable, and impossible to ignore." },
+      { "title": "Motion Design", "desc": "Animated graphics and transitions that bring your brand identity to life." },
+      { "title": "Photography & Art Direction", "desc": "Professional photography and art direction that elevates your product and brand." }
+    ],
+    "deliverables_label": "Deliverables",
+    "deliverables_title": "Every Asset Your Brand",
+    "deliverables_title_accent": "Needs.",
+    "deliverables_p": "From a single post to a full campaign ecosystem — we handle every content touchpoint, so your team can focus on running the business.",
+    "deliverables_cta": "Get a Custom Quote",
+    "deliverables": [
+      "Monthly content calendar",
+      "Ad copy for all formats",
+      "Custom graphics & banners",
+      "Short-form video reels",
+      "Brand photography",
+      "Motion design assets",
+      "Long-form brand videos",
+      "Social media templates"
+    ],
+    "cta_title": "Content That",
+    "cta_title_accent": "Makes Money.",
+    "cta_subtitle": "Stop posting and hoping. Start creating with intent. Let's build your content engine.",
+    "cta_button": "Start Your Content Strategy"
+  },
+  "ads_page": {
+    "hero_label": "Digital Advertising",
+    "hero_title": "Precision Targeting.",
+    "hero_title_accent": "Maximum Return.",
+    "hero_subtitle": "We build and manage ad campaigns across every major platform — engineered to deliver the highest possible return on every dollar spent.",
+    "hero_cta": "Launch My Campaigns",
+    "hero_link": "View Pricing",
+    "stats": [
+      { "value": "4.9×", "label": "Average ROAS" },
+      { "value": "-62%", "label": "Cost per lead reduction" },
+      { "value": "+280%", "label": "Avg. conversion rate lift" }
+    ],
+    "platforms_label": "Platforms We Master",
+    "platforms_title": "Everywhere Your",
+    "platforms_title_accent": "Customers Are.",
+    "platforms": [
+      { "name": "Facebook & Instagram Ads", "desc": "Hyper-targeted campaigns reaching the right people at the right moment." },
+      { "name": "Google Search & Display", "desc": "Be the first result when potential customers search for what you offer." },
+      { "name": "YouTube Pre-Roll & Remarketing", "desc": "Video ads that engage your audience before and after competitor content." },
+      { "name": "TikTok Ads", "desc": "Native-feeling ads that blend with content and drive massive brand awareness." }
+    ],
+    "features_label": "What's Included",
+    "features_title": "Full-Service",
+    "features_title_accent": "Ad Management.",
+    "features": [
+      { "title": "Audience Research & Targeting", "desc": "We identify your ideal customer segments using data, demographics, and behavioral signals." },
+      { "title": "Creative Ad Production", "desc": "Scroll-stopping ad creatives — static, video, carousel — built to maximize CTR." },
+      { "title": "Campaign Architecture", "desc": "Full-funnel campaign structures: awareness → consideration → conversion." },
+      { "title": "A/B Testing", "desc": "Systematic testing of ad copy, visuals, CTAs, and audiences for continuous improvement." },
+      { "title": "Conversion Optimization", "desc": "Pixel setup, event tracking, and landing page optimization for maximum ROAS." },
+      { "title": "Monthly Performance Reports", "desc": "Transparent breakdowns of spend, results, and next-month optimizations." }
+    ],
+    "cta_title": "Stop Wasting Ad",
+    "cta_title_accent": "Budget.",
+    "cta_subtitle": "Let's audit your current campaigns and show you exactly where the money is being lost — and how to fix it.",
+    "cta_button": "Get a Free Ad Audit"
+  },
+  "audio_page": {
+    "hero_label": "Audio Services",
+    "hero_title": "Sound That Elevates",
+    "hero_title_accent": "Your Brand Identity.",
+    "hero_subtitle": "From voiceovers to original music — we engineer the audio layer of your brand so your audience hears the difference.",
+    "hero_cta": "Discuss Your Audio",
+    "hero_link": "View Pricing",
+    "stats": [
+      { "value": "+40%", "label": "Higher ad completion" },
+      { "value": "22%", "label": "More brand recall" },
+      { "value": "48h", "label": "Avg. delivery time" }
+    ],
+    "services_label": "What We Offer",
+    "services_title": "Full-Spectrum",
+    "services_title_accent": "Audio Production.",
+    "services": [
+      { "title": "Professional Voiceover", "desc": "Studio-quality voiceovers in multiple languages and styles — from authoritative to friendly — for ads, explainers, and brand films.", "highlight": "Multiple languages & accents" },
+      { "title": "Original Music Production", "desc": "Custom-composed music tracks that perfectly match your brand's emotion, energy, and identity.", "highlight": "100% original, royalty-free" },
+      { "title": "Audio Mixing & Mastering", "desc": "Professional post-production to make your audio punchy, clear, and broadcast-ready on any device.", "highlight": "Broadcast-ready quality" },
+      { "title": "Sonic Branding & Jingles", "desc": "A distinctive audio identity — logo sounds, jingles, and sonic signatures — that makes your brand instantly recognizable.", "highlight": "Instant brand recognition" }
+    ],
+    "why_label": "Why Audio?",
+    "why_title": "The Most",
+    "why_title_accent": "Underrated",
+    "why_title_end": "Advantage.",
+    "why": [
+      { "num": "01", "title": "Audio Identity Matters", "desc": "Brands with a consistent sonic identity are 22% more memorable than those without." },
+      { "num": "02", "title": "Ads Perform Better", "desc": "Video ads with professional audio see up to 40% higher completion rates and better recall." },
+      { "num": "03", "title": "Full Creative Control", "desc": "We work closely with you to capture the exact tone and emotion your brand needs to convey." }
+    ],
+    "cta_title": "Make Your Brand",
+    "cta_title_accent": "Sound Iconic.",
+    "cta_subtitle": "Audio is the final frontier of brand identity. Let's give your business a voice that people remember.",
+    "cta_button": "Start Your Audio Project"
+  },
+  "blog": {
+    "hero_label": "Insights & Strategy",
+    "hero_title": "The REVOLVER",
+    "hero_title_accent": "Intelligence Blog.",
+    "hero_subtitle": "Tactics, frameworks, and data-backed strategies from the team behind 60+ successful brand growth campaigns.",
+    "categories": {
+      "all": "All",
+      "strategy": "Strategy",
+      "social_media": "Social Media",
+      "advertising": "Advertising",
+      "content": "Content",
+      "branding": "Branding"
+    },
+    "featured_badge": "Featured",
+    "no_posts": "No posts in this category yet.",
+    "view_all": "View all posts",
+    "newsletter": {
+      "label": "Stay Sharp",
+      "title": "Marketing Insights,",
+      "title_accent": "Weekly.",
+      "subtitle": "No fluff. Just the tactics, frameworks, and data we're using with real clients — straight to your inbox.",
+      "placeholder": "your@email.com",
+      "button": "Subscribe Free",
+      "success": "You're in! First issue lands this week."
+    }
+  }
+}
