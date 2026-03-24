@@ -1,105 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import PageLayout from "@components/layout/PageLayout";
 import PageHero from "@components/ui/PageHero";
 import SectionLabel from "@components/ui/SectionLabel";
 import { EASE_OUT_EXPO } from "@utils/animations";
-
-/* ─── data ─────────────────────────────────────────────────────────────── */
-const POSTS = [
-  {
-    id: 1,
-    category: "Strategy",
-    title: "How Neuromarketing is Transforming Modern Brand Strategy",
-    excerpt:
-      "Discover how consumer psychology is reshaping how top brands craft campaigns that bypass rational thinking and speak directly to emotion — at scale.",
-    date: "Mar 18, 2026",
-    readTime: "7 min read",
-    featured: true,
-  },
-  {
-    id: 2,
-    category: "Advertising",
-    title: "5 Paid Media Frameworks That Consistently Deliver 4× ROAS",
-    excerpt:
-      "Stop guessing your ad budgets. These battle-tested frameworks have consistently delivered returns above 4× across 40+ client campaigns.",
-    date: "Mar 12, 2026",
-    readTime: "9 min read",
-  },
-  {
-    id: 3,
-    category: "Content",
-    title: "The Short-Form Video Formula: Reels That Actually Convert",
-    excerpt:
-      "High views ≠ high conversions. We break down the exact video structure that drives clicks, leads, and measurable sales for our clients.",
-    date: "Mar 5, 2026",
-    readTime: "6 min read",
-  },
-  {
-    id: 4,
-    category: "Branding",
-    title: "Audio Branding: Why Sound is the Next Competitive Edge",
-    excerpt:
-      "Visual branding gets all the attention — but brands dominating 2026 are the ones who own a sound. Here's why sonic identity matters more than ever.",
-    date: "Feb 28, 2026",
-    readTime: "5 min read",
-  },
-  {
-    id: 5,
-    category: "Social Media",
-    title: "TikTok Algorithm Decoded: What's Actually Working Right Now",
-    excerpt:
-      "The TikTok algorithm has evolved. Forget the old playbook — here's what our data from 200+ posts reveals about reach and virality in 2026.",
-    date: "Feb 20, 2026",
-    readTime: "8 min read",
-  },
-  {
-    id: 6,
-    category: "Strategy",
-    title: "Building a Conversion Funnel That Doesn't Leak Revenue",
-    excerpt:
-      "Most funnels lose 70% of prospects before purchase. We reveal the psychology-backed architecture that keeps leads moving forward at every stage.",
-    date: "Feb 14, 2026",
-    readTime: "10 min read",
-  },
-  {
-    id: 7,
-    category: "Social Media",
-    title: "LinkedIn for B2B: The Organic Growth Playbook Nobody Shares",
-    excerpt:
-      "LinkedIn organic reach is at an all-time high for those who know how to use it. Here's our exact posting framework for generating B2B leads.",
-    date: "Feb 7, 2026",
-    readTime: "7 min read",
-  },
-  {
-    id: 8,
-    category: "Content",
-    title: "Copywriting Principles That Drive Action, Not Just Clicks",
-    excerpt:
-      "Great copy isn't about words — it's about the psychological triggers that move a reader from passive to buyer. Here are the frameworks we use every day.",
-    date: "Jan 30, 2026",
-    readTime: "6 min read",
-  },
-  {
-    id: 9,
-    category: "Advertising",
-    title: "Google Ads vs. Meta Ads: Where Should Your Budget Go in 2026?",
-    excerpt:
-      "The debate continues — but the answer is never one-size-fits-all. We break down which platform wins for different goals, industries, and funnel stages.",
-    date: "Jan 22, 2026",
-    readTime: "8 min read",
-  },
-];
-
-/* ─── category accent colors (subtle per-category tint) ─────────────────── */
-const CATEGORY_COLORS = {
-  Strategy:    "#e85d04",
-  "Social Media": "#3b82f6",
-  Advertising: "#a855f7",
-  Content:     "#10b981",
-  Branding:    "#f59e0b",
-};
+import { POSTS, CATEGORY_COLORS } from "@constants/blog";
 
 /* ─── Arrow icon ─────────────────────────────────────────────────────────── */
 function ArrowIcon() {
@@ -115,6 +22,7 @@ function ArrowIcon() {
 /* ─── featured post card ────────────────────────────────────────────────── */
 function FeaturedCard({ post }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const color = CATEGORY_COLORS[post.category] || "#e85d04";
   return (
     <motion.article
@@ -123,6 +31,7 @@ function FeaturedCard({ post }) {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.6, ease: EASE_OUT_EXPO }}
       whileHover="hover"
+      onClick={() => navigate(`/blog/${post.slug}`)}
       className="relative glass rounded-3xl overflow-hidden cursor-pointer group col-span-full"
     >
       {/* background glow */}
@@ -185,6 +94,7 @@ function FeaturedCard({ post }) {
 
 /* ─── regular post card ─────────────────────────────────────────────────── */
 function PostCard({ post, index }) {
+  const navigate = useNavigate();
   const color = CATEGORY_COLORS[post.category] || "#e85d04";
   return (
     <motion.article
@@ -193,6 +103,7 @@ function PostCard({ post, index }) {
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.5, delay: index * 0.07, ease: EASE_OUT_EXPO }}
       whileHover={{ y: -6 }}
+      onClick={() => navigate(`/blog/${post.slug}`)}
       className="glass rounded-2xl p-6 sm:p-7 flex flex-col cursor-pointer group relative overflow-hidden"
     >
       <div

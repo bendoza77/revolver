@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NAV_LINKS } from "@constants/navigation";
 import { useTheme } from "@context/ThemeContext";
 import Button from "@components/ui/Button";
@@ -46,8 +46,21 @@ function Logo() {
 export default function Header() {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [scrolled, setScrolled]     = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    closeMenu();
+    if (pathname === "/") {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate({ pathname: "/", hash: href });
+    }
+  };
 
   const isKa    = i18n.language === "ka";
   const isLight = theme === "light";
@@ -80,7 +93,9 @@ export default function Header() {
         style={scrolled ? { backgroundColor: "color-mix(in srgb, var(--bg) 92%, transparent)" } : {}}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
-          <Logo />
+          <div className={`transition-opacity duration-300 ${mobileOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
+            <Logo />
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8">
@@ -88,6 +103,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="font-display text-sm font-medium text-fg-60 hover:text-fg transition-colors duration-200 tracking-wide relative group"
               >
                 {t(`nav.${link.key}`)}
@@ -141,7 +157,7 @@ export default function Header() {
             {/* Backdrop */}
             <motion.div
               key="backdrop"
-              className="fixed inset-0 z-[45] bg-black/60 backdrop-blur-sm"
+              className="fixed inset-0 z-[51] bg-black/60 backdrop-blur-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -152,7 +168,7 @@ export default function Header() {
             {/* Sidebar panel */}
             <motion.aside
               key="sidebar"
-              className="fixed top-0 right-0 bottom-0 z-[46] w-[300px] flex flex-col overflow-hidden"
+              className="fixed top-0 right-0 bottom-0 z-[52] w-[300px] flex flex-col overflow-hidden"
               style={{ backgroundColor: "var(--bg)" }}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -164,7 +180,7 @@ export default function Header() {
 
               {/* Top: logo + close */}
               <div className="flex items-center justify-between px-6 pt-6 pb-5 border-b border-fg-5">
-                <div className="flex items-center gap-2.5">
+                <button onClick={closeMenu} className="flex items-center gap-2.5 cursor-pointer">
                   <div className="w-8 h-8 rounded-full border-2 border-[#e85d04] flex items-center justify-center">
                     <svg width="12" height="12" viewBox="0 0 20 20" fill="none">
                       <circle cx="10" cy="10" r="3" fill="#e85d04" />
@@ -172,7 +188,7 @@ export default function Header() {
                     </svg>
                   </div>
                   <span className="font-display text-base font-800 tracking-wider text-fg">REVOLVER</span>
-                </div>
+                </button>
                 <button
                   onClick={closeMenu}
                   aria-label="Close menu"
@@ -191,7 +207,7 @@ export default function Header() {
                   <motion.a
                     key={link.href}
                     href={link.href}
-                    onClick={closeMenu}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     initial={{ opacity: 0, x: 24 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.06 + i * 0.06, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}

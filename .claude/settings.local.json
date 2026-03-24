@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(find 'C:/Users/User/Desktop/revlover agency/src' -name *.jsx -o -name *.tsx -o -name *.js -o -name *.ts)",
+      "Bash(find 'C:/Users/User/Desktop/revlover agency/client/src' -name *.jsx -o -name *.tsx -o -name *.js)"
     ]
   }
 }
