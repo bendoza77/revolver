@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 import { useScrollReveal } from "@hooks/useScrollReveal";
 import Button from "@components/ui/Button";
 import SectionLabel from "@components/ui/SectionLabel";
@@ -38,15 +40,22 @@ export default function CTA() {
     };
 
     try {
-      // Send notification to agency + auto-reply to user in parallel
+      // Send emails + save to Firestore in parallel
       await Promise.all([
         emailjs.send(EJS.serviceId, EJS.templateNotify, payload, EJS.publicKey),
         emailjs.send(EJS.serviceId, EJS.templateReply,  payload, EJS.publicKey),
+        addDoc(collection(db, "submissions"), {
+          name:      payload.userName,
+          email:     payload.userEmail,
+          service:   payload.userService,
+          message:   payload.message,
+          createdAt: serverTimestamp(),
+        }),
       ]);
       setStatus("success");
       setForm(INITIAL_FORM);
     } catch (err) {
-      console.error("EmailJS error:", err);
+      console.error("Submission error:", err);
       setStatus("error");
     }
   };

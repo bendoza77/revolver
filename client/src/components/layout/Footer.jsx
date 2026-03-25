@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { FOOTER_LINK_KEYS } from "@constants/navigation";
+import revolverLogo from "@/assets/revolver.jpg";
 
 const SOCIAL_ICONS = [
   {
@@ -82,12 +83,11 @@ export default function Footer() {
           {/* Brand block */}
           <div className="sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 rounded-full border-2 border-[#e85d04] flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
-                  <circle cx="10" cy="10" r="3" fill="#e85d04" />
-                  <path d="M10 2v3M10 15v3M2 10h3M15 10h3M4.22 4.22l2.12 2.12M13.66 13.66l2.12 2.12M4.22 15.78l2.12-2.12M13.66 6.34l2.12-2.12" stroke="#e85d04" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
-              </div>
+              <img
+                src={revolverLogo}
+                alt="REVOLVER"
+                className="w-9 h-9 rounded-full object-cover border-2 border-[#e85d04]"
+              />
               <span className="font-display text-xl font-800 tracking-wider text-fg">REVOLVER</span>
             </div>
             <p className="text-fg-40 text-sm leading-relaxed max-w-xs mb-6">

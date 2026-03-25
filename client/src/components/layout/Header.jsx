@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NAV_LINKS } from "@constants/navigation";
 import { useTheme } from "@context/ThemeContext";
 import Button from "@components/ui/Button";
+import revolverLogo from "@/assets/revolver.jpg";
 
 function SunIcon() {
   return (
@@ -31,12 +32,11 @@ function Logo() {
     <Link to="/" className="flex items-center gap-2.5 group flex-shrink-0">
       <div className="relative w-8 h-8 sm:w-9 sm:h-9">
         <div className="absolute inset-0 rounded-full bg-[#e85d04] opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm" />
-        <div className="relative w-full h-full rounded-full border-2 border-[#e85d04] flex items-center justify-center">
-          <svg width="13" height="13" viewBox="0 0 20 20" fill="none">
-            <circle cx="10" cy="10" r="3" fill="#e85d04" />
-            <path d="M10 2v3M10 15v3M2 10h3M15 10h3M4.22 4.22l2.12 2.12M13.66 13.66l2.12 2.12M4.22 15.78l2.12-2.12M13.66 6.34l2.12-2.12" stroke="#e85d04" strokeWidth="1.5" strokeLinecap="round" />
-          </svg>
-        </div>
+        <img
+          src={revolverLogo}
+          alt="REVOLVER"
+          className="relative w-full h-full rounded-full object-cover border-2 border-[#e85d04]"
+        />
       </div>
       <span className="font-display text-lg sm:text-xl font-800 tracking-wider text-fg">REVOLVER</span>
     </Link>
@@ -183,12 +183,11 @@ export default function Header() {
               {/* Top: logo + close */}
               <div className="flex items-center justify-between px-6 pt-6 pb-5 border-b border-fg-5">
                 <button onClick={closeMenu} className="flex items-center gap-2.5 cursor-pointer">
-                  <div className="w-8 h-8 rounded-full border-2 border-[#e85d04] flex items-center justify-center">
-                    <svg width="12" height="12" viewBox="0 0 20 20" fill="none">
-                      <circle cx="10" cy="10" r="3" fill="#e85d04" />
-                      <path d="M10 2v3M10 15v3M2 10h3M15 10h3" stroke="#e85d04" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
-                  </div>
+                  <img
+                    src={revolverLogo}
+                    alt="REVOLVER"
+                    className="w-8 h-8 rounded-full object-cover border-2 border-[#e85d04]"
+                  />
                   <span className="font-display text-base font-800 tracking-wider text-fg">REVOLVER</span>
                 </button>
                 <button

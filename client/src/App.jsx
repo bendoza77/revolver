@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { AppProvider } from "@context/AppContext";
 import { ThemeProvider } from "@context/ThemeContext";
+import { AuthProvider } from "@context/AuthContext";
+import ProtectedRoute from "@components/admin/ProtectedRoute";
 
 const PAGE_TITLES = {
   "/":                          "REVOLVER — Creative Agency",
@@ -50,12 +52,15 @@ import Blog           from "@pages/company/Blog";
 import BlogPost       from "@pages/company/BlogPost";
 import Privacy        from "@pages/legal/Privacy";
 import Terms          from "@pages/legal/Terms";
+import AdminLogin     from "@pages/admin/Login";
+import AdminDashboard from "@pages/admin/Dashboard";
 
 
 export default function App() {
   return (
     <ThemeProvider>
       <AppProvider>
+        <AuthProvider>
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
@@ -72,8 +77,11 @@ export default function App() {
             <Route path="/blog/:slug"               element={<BlogPost />} />
             <Route path="/privacy"                  element={<Privacy />} />
             <Route path="/terms"                    element={<Terms />} />
+            <Route path="/revolver-studio/login"   element={<AdminLogin />} />
+            <Route path="/revolver-studio"         element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
           </Routes>
         </BrowserRouter>
+        </AuthProvider>
       </AppProvider>
     </ThemeProvider>
   );
