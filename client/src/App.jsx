@@ -5,6 +5,7 @@ import { ThemeProvider } from "@context/ThemeContext";
 
 const PAGE_TITLES = {
   "/":                          "REVOLVER — Creative Agency",
+  "/services":                  "Services | REVOLVER",
   "/services/social-media":     "Social Media | REVOLVER",
   "/services/content-marketing":"Content Marketing | REVOLVER",
   "/services/digital-ads":      "Digital Ads | REVOLVER",
@@ -37,6 +38,7 @@ function ScrollToTop() {
 }
 
 import Home           from "@pages/Home";
+import ServicesPage   from "@pages/services/ServicesPage";
 import SocialMedia    from "@pages/services/SocialMedia";
 import ContentMarketing from "@pages/services/ContentMarketing";
 import DigitalAds     from "@pages/services/DigitalAds";
@@ -58,6 +60,7 @@ export default function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/"                         element={<Home />} />
+            <Route path="/services"                 element={<ServicesPage />} />
             <Route path="/services/social-media"    element={<SocialMedia />} />
             <Route path="/services/content-marketing" element={<ContentMarketing />} />
             <Route path="/services/digital-ads"     element={<DigitalAds />} />

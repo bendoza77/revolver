@@ -25,4 +25,13 @@ i18n
     },
   });
 
+// Keep <html lang="..."> in sync so CSS :lang(ka) rules apply
+i18n.on("languageChanged", (lng) => {
+  document.documentElement.lang = lng;
+});
+// Set on initial load
+i18n.isInitialized
+  ? (document.documentElement.lang = i18n.language)
+  : i18n.on("initialized", () => { document.documentElement.lang = i18n.language; });
+
 export default i18n;

@@ -1,6 +1,7 @@
 export const SERVICE_CATEGORIES = [
   {
     id: "social",
+    href: "/services/social-media",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
@@ -23,6 +24,7 @@ export const SERVICE_CATEGORIES = [
         <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     ),
+    href: "/services/content-marketing",
     title: "Content Marketing",
     tagline: "Words that sell. Visuals that stop the scroll.",
     items: [
@@ -40,6 +42,7 @@ export const SERVICE_CATEGORIES = [
         <polyline points="17 6 23 6 23 12" />
       </svg>
     ),
+    href: "/services/digital-ads",
     title: "Digital Advertising",
     tagline: "Precision targeting. Maximum return on every euro.",
     items: [
@@ -57,6 +60,7 @@ export const SERVICE_CATEGORIES = [
         <circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" />
       </svg>
     ),
+    href: "/services/audio",
     title: "Audio Services",
     tagline: "Sound that elevates your brand identity.",
     items: [

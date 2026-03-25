@@ -54,7 +54,9 @@ export default function Header() {
   const handleNavClick = (e, href) => {
     e.preventDefault();
     closeMenu();
-    if (pathname === "/") {
+    if (href.startsWith("/")) {
+      navigate(href);
+    } else if (pathname === "/") {
       const el = document.querySelector(href);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {

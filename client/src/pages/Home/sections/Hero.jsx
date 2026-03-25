@@ -136,7 +136,7 @@ export default function Hero() {
               <span className="font-display text-3xl sm:text-4xl font-700 text-gradient">
                 {stat.value}
               </span>
-              <span className="text-fg-40 text-xs sm:text-sm tracking-wide uppercase font-display">
+              <span className="text-fg-40 text-xs mt-3 sm:text-sm tracking-wide uppercase font-display">
                 {t(`hero.stats.${STAT_KEYS[i]}`)}
               </span>
             </div>

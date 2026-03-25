@@ -2,7 +2,7 @@
 
 /* ─── Design tokens ─────────────────────────────────────────── */
 @theme {
-  --font-display: "Syne", "Noto Sans Georgian", sans-serif;
+  --font-display: "Graduate", "Noto Sans Georgian", sans-serif;
   --font-body: "Inter", "Noto Sans Georgian", sans-serif;
   --color-orange: #e85d04;
   --color-orange-light: #ff7a20;
@@ -59,7 +59,7 @@ select option {
 }
 
 /* ─── Typography ────────────────────────────────────────────── */
-.font-display { font-family: "Syne", "Noto Sans Georgian", sans-serif; }
+.font-display { font-family: "Graduate", "Noto Sans Georgian", sans-serif; }
 
 .text-gradient {
   background: linear-gradient(135deg, #e85d04 0%, #ff9a3c 50%, #e85d04 100%);
@@ -173,3 +173,49 @@ select option {
   0%   { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
 }
+
+/* ─── Georgian language layout fixes ────────────────────────
+   Graduate is Latin-only. When lang=ka the browser falls back
+   to Noto Sans Georgian, which has different metrics.
+   These rules restore readable layout for Georgian script.
+──────────────────────────────────────────────────────────── */
+:lang(ka) .font-display,
+:lang(ka) .font-display * {
+  font-family: "Noto Sans Georgian", sans-serif !important;
+  /* Graduate uses tight tracking; Georgian script must have none */
+  letter-spacing: 0 !important;
+}
+
+/* Body text — remove any tracking applied in components */
+:lang(ka) * {
+  letter-spacing: 0 !important;
+}
+
+/* Hero headline uses leading-[0.95] which causes Georgian
+   characters to overlap. Bump it to readable values. */
+:lang(ka) h1 {
+  line-height: 1.25 !important;
+  word-break: break-word;
+}
+
+:lang(ka) h2,
+:lang(ka) h3 {
+  line-height: 1.3 !important;
+  word-break: break-word;
+}
+
+/* Paragraphs and list items need slightly more breathing room */
+:lang(ka) p,
+:lang(ka) li,
+:lang(ka) span {
+  line-height: 1.7 !important;
+}
+
+/* Buttons — keep compact but readable */
+:lang(ka) button,
+:lang(ka) a {
+  letter-spacing: 0 !important;
+}
+
+/* Badge / scroll-indicator use tracking-[0.15em] / tracking-[0.2em]
+   which look wrong on Georgian — already covered by * rule above  */
