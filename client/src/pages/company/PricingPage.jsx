@@ -6,7 +6,7 @@ import Button from "@components/ui/Button";
 import SectionLabel from "@components/ui/SectionLabel";
 import { useScrollReveal } from "@hooks/useScrollReveal";
 import { EASE_OUT_EXPO } from "@utils/animations";
-import { PRICING_PLANS, ADDON_PRICES, TIKTOK_PRICES } from "@constants/pricing";
+import { usePricing } from "@hooks/usePricing";
 
 function PricingCard({ plan, index }) {
   const { t } = useTranslation();
@@ -78,6 +78,7 @@ function PricingCard({ plan, index }) {
 
 export default function PricingPage() {
   const { t } = useTranslation();
+  const { plans: PRICING_PLANS, addons: ADDON_PRICES, tiktok: TIKTOK_PRICES } = usePricing();
   const plansRef  = useScrollReveal();
   const addonsRef = useScrollReveal();
   const tiktokRef = useScrollReveal();

@@ -7,10 +7,11 @@ import Button from "@components/ui/Button";
 import SectionLabel from "@components/ui/SectionLabel";
 import { useScrollReveal } from "@hooks/useScrollReveal";
 import { EASE_OUT_EXPO } from "@utils/animations";
-import { PORTFOLIO_PROJECTS } from "@constants/portfolio";
+import { usePortfolio } from "@hooks/usePortfolio";
 
 export default function OurWork() {
   const { t } = useTranslation();
+  const projects = usePortfolio();
 
   const filters = t("our_work.filters", { returnObjects: true });
   const stats   = t("our_work.stats", { returnObjects: true });
@@ -21,8 +22,8 @@ export default function OurWork() {
   const statsRef   = useScrollReveal();
 
   const filtered = active === filters[0]
-    ? PORTFOLIO_PROJECTS
-    : PORTFOLIO_PROJECTS.filter((p) => p.tag === active);
+    ? projects
+    : projects.filter((p) => p.tag === active);
 
   return (
     <PageLayout>

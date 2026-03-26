@@ -6,7 +6,8 @@ import PageLayout from "@components/layout/PageLayout";
 import PageHero from "@components/ui/PageHero";
 import SectionLabel from "@components/ui/SectionLabel";
 import { EASE_OUT_EXPO } from "@utils/animations";
-import { POSTS, CATEGORY_COLORS } from "@constants/blog";
+import { CATEGORY_COLORS } from "@constants/blog";
+import { useBlogPosts } from "@hooks/useBlogPosts";
 
 /* ─── Arrow icon ─────────────────────────────────────────────────────────── */
 function ArrowIcon() {
@@ -215,6 +216,7 @@ function Newsletter() {
 /* ─── main page ─────────────────────────────────────────────────────────── */
 export default function Blog() {
   const { t } = useTranslation();
+  const posts = useBlogPosts();
   const [activeCategory, setActiveCategory] = useState("All");
 
   const CATEGORIES_KEYS = [
@@ -227,8 +229,8 @@ export default function Blog() {
   ];
 
   const filtered = activeCategory === "All"
-    ? POSTS
-    : POSTS.filter((p) => p.category === activeCategory);
+    ? posts
+    : posts.filter((p) => p.category === activeCategory);
 
   const featured = filtered.find((p) => p.featured);
   const rest     = filtered.filter((p) => !p.featured);

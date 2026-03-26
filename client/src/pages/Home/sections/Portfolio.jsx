@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useScrollReveal } from "@hooks/useScrollReveal";
 import SectionLabel from "@components/ui/SectionLabel";
-import { PORTFOLIO_PROJECTS } from "@constants/portfolio";
+import { usePortfolio } from "@hooks/usePortfolio";
 
 function ProjectCard({ project, index }) {
   const { t } = useTranslation();
@@ -41,11 +41,11 @@ function ProjectCard({ project, index }) {
               {t("portfolio.result")}
             </div>
             <div className="font-display text-lg sm:text-xl font-700 text-fg mb-1">
-              {t(`portfolio.project_${project.id}.result`)}
+              {t(`portfolio.project_${project.id}.result`, { defaultValue: project.result })}
             </div>
           </motion.div>
           <h3 className="font-display text-fg-60 text-sm">
-            {t(`portfolio.project_${project.id}.title`)}
+            {t(`portfolio.project_${project.id}.title`, { defaultValue: project.title })}
           </h3>
         </div>
       </div>
@@ -69,6 +69,7 @@ function ProjectCard({ project, index }) {
 
 export default function Portfolio() {
   const { t } = useTranslation();
+  const projects = usePortfolio();
   const { ref: titleRef, isInView: titleInView } = useScrollReveal();
   const filters = t("portfolio.filters", { returnObjects: true });
   const [activeFilter, setActiveFilter] = useState(0); // index into filters array
@@ -76,8 +77,8 @@ export default function Portfolio() {
   const enFilters = ["All", "Social Media", "Video", "Branding", "Ads"];
   const filtered =
     activeFilter === 0
-      ? PORTFOLIO_PROJECTS
-      : PORTFOLIO_PROJECTS.filter((p) => p.tag === enFilters[activeFilter]);
+      ? projects
+      : projects.filter((p) => p.tag === enFilters[activeFilter]);
 
   return (
     <section id="portfolio" className="section-padding relative overflow-hidden">

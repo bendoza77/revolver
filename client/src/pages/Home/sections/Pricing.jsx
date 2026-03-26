@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useScrollReveal } from "@hooks/useScrollReveal";
 import SectionLabel from "@components/ui/SectionLabel";
 import Button from "@components/ui/Button";
-import { PRICING_PLANS, ADDON_PRICES, TIKTOK_PRICES } from "@constants/pricing";
+import { usePricing } from "@hooks/usePricing";
 
 function PricingCard({ plan, index }) {
   const { t } = useTranslation();
@@ -81,6 +81,7 @@ function PricingCard({ plan, index }) {
 
 export default function Pricing() {
   const { t } = useTranslation();
+  const { plans: PRICING_PLANS, addons: ADDON_PRICES, tiktok: TIKTOK_PRICES } = usePricing();
   const { ref: titleRef, isInView: titleInView } = useScrollReveal();
   const { ref: addonsRef, isInView: addonsInView } = useScrollReveal();
   const { ref: tiktokRef, isInView: tiktokInView } = useScrollReveal();

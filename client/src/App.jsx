@@ -4,6 +4,7 @@ import { AppProvider } from "@context/AppContext";
 import { ThemeProvider } from "@context/ThemeContext";
 import { AuthProvider } from "@context/AuthContext";
 import ProtectedRoute from "@components/admin/ProtectedRoute";
+import AIChat from "@components/ui/AIChat";
 
 /* ── Lazy-loaded pages (each becomes its own JS chunk) ──────── */
 const Home             = lazy(() => import("@pages/Home"));
@@ -71,6 +72,7 @@ export default function App() {
         <AuthProvider>
           <BrowserRouter>
             <ScrollToTop />
+            <AIChat />
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/"                           element={<Home />} />

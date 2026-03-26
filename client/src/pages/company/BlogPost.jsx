@@ -1,8 +1,9 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageLayout from "@components/layout/PageLayout";
-import { POSTS, CATEGORY_COLORS } from "@constants/blog";
+import { CATEGORY_COLORS } from "@constants/blog";
 import { EASE_OUT_EXPO } from "@utils/animations";
+import { useBlogPosts } from "@hooks/useBlogPosts";
 
 function ArrowLeft() {
   return (
@@ -66,7 +67,8 @@ function BodyContent({ text }) {
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const post = POSTS.find((p) => p.slug === slug);
+  const posts = useBlogPosts();
+  const post = posts.find((p) => p.slug === slug);
   const color = post ? (CATEGORY_COLORS[post.category] || "#e85d04") : "#e85d04";
 
   if (!post) {

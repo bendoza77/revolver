@@ -45,6 +45,16 @@ export default defineConfig({
     },
   },
 
+  // Dev proxy — forwards /api to the Express server
+  server: {
+    proxy: {
+      "/api": {
+        target:       "http://localhost:3000",
+        changeOrigin: true,
+      },
+    },
+  },
+
   // Faster dev server — pre-bundle all heavy deps on startup
   optimizeDeps: {
     include: [
