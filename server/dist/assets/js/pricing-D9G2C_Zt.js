@@ -1,0 +1,1 @@
+var e=[{key:`starter`,price:`1,500₾`,popular:!1},{key:`business`,price:`2,500₾`,popular:!0},{key:`premium`,price:`3,500₾`,popular:!1}],t={reel:`350₾`,google:`600₾`,audio:`300₾`},n={starter:`1,200₾/mo`,growth:`2,000₾/mo`};export{e as n,n as r,t};
