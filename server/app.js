@@ -8,8 +8,15 @@ require("dotenv").config();
 const app = express();
 
 /* ── Middleware ──────────────────────────────────────────────── */
+const ALLOWED_ORIGINS = (process.env.CLIENT_ORIGIN || "http://localhost:5173")
+  .split(",").map((o) => o.trim());
+
 app.use(cors({
-  origin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
+  origin: (origin, cb) => {
+    // allow server-to-server / curl (no origin) and listed origins
+    if (!origin || ALLOWED_ORIGINS.includes(origin)) return cb(null, true);
+    cb(new Error(`CORS: origin ${origin} not allowed`));
+  },
   methods: ["GET", "POST"],
 }));
 app.use(express.json({ limit: "32kb" }));

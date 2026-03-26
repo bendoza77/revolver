@@ -6,7 +6,8 @@
       "Bash(find 'C:/Users/User/Desktop/revlover agency/src' -name *.jsx -o -name *.tsx -o -name *.js -o -name *.ts)",
       "Bash(find 'C:/Users/User/Desktop/revlover agency/client/src' -name *.jsx -o -name *.tsx -o -name *.js)",
       "Bash(printf 'NODE_ENV=development\\\\nPORT=3000\\\\nCLIENT_ORIGIN=http://localhost:5173\\\\nGROQ_API_KEY=your_groq_api_key_here\\\\n')",
-      "Bash(\"C:\\\\Users\\\\User\\\\Desktop\\\\revlover agency\\\\server\\\\.env\")"
+      "Bash(\"C:\\\\Users\\\\User\\\\Desktop\\\\revlover agency\\\\server\\\\.env\")",
+      "Bash(\"C:\\\\Users\\\\User\\\\Desktop\\\\revlover agency\\\\client\\\\.env\")"
     ]
   }
 }

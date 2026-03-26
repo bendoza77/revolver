@@ -2,11 +2,14 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
+/* ─── API base: empty string in dev (Vite proxy), full URL in prod ── */
+const API_BASE = import.meta.env.VITE_API_URL ?? "";
+
 /* ─── Stream helper ─────────────────────────────────────────── */
 async function streamChat(messages, onChunk, onDone, onError) {
   let response;
   try {
-    response = await fetch("/api/ai/chat", {
+    response = await fetch(`${API_BASE}/api/ai/chat`, {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
       body:    JSON.stringify({ messages }),
