@@ -40,18 +40,24 @@ export default function CTA() {
     };
 
     try {
-      // Send emails + save to Firestore in parallel
-      await Promise.all([
-        emailjs.send(EJS.serviceId, EJS.templateNotify, payload, EJS.publicKey),
-        emailjs.send(EJS.serviceId, EJS.templateReply,  payload, EJS.publicKey),
-        addDoc(collection(db, "submissions"), {
-          name:      payload.userName,
-          email:     payload.userEmail,
-          service:   payload.userService,
-          message:   payload.message,
-          createdAt: serverTimestamp(),
-        }),
-      ]);
+      // 1. Save to Firestore — always, this is the critical operation
+      await addDoc(collection(db, "submissions"), {
+        name:      payload.userName,
+        email:     payload.userEmail,
+        service:   payload.userService,
+        message:   payload.message,
+        createdAt: serverTimestamp(),
+      });
+
+      // 2. Send emails — non-critical, fire-and-forget so email issues
+      //    never break the form for the user
+      if (EJS.serviceId && EJS.publicKey) {
+        Promise.all([
+          emailjs.send(EJS.serviceId, EJS.templateNotify, payload, EJS.publicKey),
+          emailjs.send(EJS.serviceId, EJS.templateReply,  payload, EJS.publicKey),
+        ]).catch((err) => console.warn("[emailjs] send failed (non-critical):", err));
+      }
+
       setStatus("success");
       setForm(INITIAL_FORM);
     } catch (err) {
